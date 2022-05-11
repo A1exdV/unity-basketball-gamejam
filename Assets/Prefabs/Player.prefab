@@ -880,8 +880,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.3465922, y: 3.1373227, z: 1.9917119}
-  m_Center: {x: 0.013013005, y: -0.43501937, z: -0.8448293}
+  m_Size: {x: 2.3465922, y: 3.1373227, z: 2.3997355}
+  m_Center: {x: 0.013013005, y: -0.43501937, z: 0.9117175}
 --- !u!54 &736294112
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -923,6 +923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce6a8a5034fe1a4aa50598263f0f9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballAnc: {fileID: 868216311432004689}
+  basketTrigger: {fileID: 0}
 --- !u!1 &5989808243950588981
 GameObject:
   m_ObjectHideFlags: 0
