@@ -11,7 +11,7 @@ public class BallController : MonoBehaviour
     private bool _ballToHand;
     private Rigidbody _ballRB;
     private Collider _ballCol;
-    private bool _ballInHand;
+    public bool _ballInHand;
 
     private PlayerController _playerController;
     private Rigidbody _thisRB;
@@ -51,9 +51,16 @@ public class BallController : MonoBehaviour
         {
             _playerController.ChangeState("Shoot");
             _thisRB.isKinematic = true;
-            var direction = new Vector3(basketTrigger.transform.position.x,0,basketTrigger.transform.position.z);
-            transform.LookAt(transform.position - direction);
+            var direction = new Vector3(basketTrigger.transform.position.x,transform.position.y,basketTrigger.transform.position.z);
+            transform.LookAt(direction);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position,
+            new Vector3(basketTrigger.transform.position.x,transform.position.y,basketTrigger.transform.position.z));
     }
 
     public void ShootEnd()
