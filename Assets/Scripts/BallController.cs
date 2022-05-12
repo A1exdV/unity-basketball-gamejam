@@ -56,6 +56,10 @@ public class BallController : MonoBehaviour
         }
     }
 
+    public void OnTrow()
+    {
+        _ball.GetComponent<FlyingBall>().enabled = true;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
