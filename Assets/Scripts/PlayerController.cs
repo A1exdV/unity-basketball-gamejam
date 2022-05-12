@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_currentState == "Shoot")
+        if (_currentState is "Shoot" or "Preparing")
         {
             return;
         }
@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
             case "Shoot":
                 _animator.Play("Shoot");
                 _currentState = "Shoot";
+                break;
+            case "Preparing":
+                _animator.Play("Preparing");
+                _currentState = "Preparing";
                 break;
         }
     }

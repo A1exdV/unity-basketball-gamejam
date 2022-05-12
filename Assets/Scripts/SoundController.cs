@@ -28,7 +28,7 @@ public class SoundController : MonoBehaviour
 
     public void Bounce()
     {
-        if (_ballController._ballInHand)
+        if (_ballController.ballInHand)
         {
             playerAudioSource.clip = ballBounce;
             playerAudioSource.Play();
