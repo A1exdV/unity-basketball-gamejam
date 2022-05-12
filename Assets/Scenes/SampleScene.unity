@@ -2678,7 +2678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91e21a55f44324c9dbc0a8409a4b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 963194226}
+  sounds:
+  - {fileID: 1392099011}
+  - {fileID: 1814577844}
+  - {fileID: 963194229}
   soundText: {fileID: 678031684}
 --- !u!1 &647366320
 GameObject:
@@ -2733,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4564,6 +4567,11 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bacdb87a78a3ca847a674df0ff9c059b, type: 3}
   m_PrefabInstance: {fileID: 1162757783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1392099011 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 736294117, guid: cc5be26a28e48884b93084550c6e37f3, type: 3}
+  m_PrefabInstance: {fileID: 5989808244394297130}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393758729
 GameObject:
@@ -6669,7 +6677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
