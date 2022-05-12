@@ -8,8 +8,6 @@ public class SoundController : MonoBehaviour
 {
     [SerializeField] private AudioClip jump;
 
-    [SerializeField] private AudioClip ballBounce;
-
     [SerializeField] private List<AudioClip> steps;
     [SerializeField] private AudioSource playerAudioSource;
 
@@ -24,15 +22,6 @@ public class SoundController : MonoBehaviour
     {
         playerAudioSource.clip = steps[Random.Range(0, steps.Count - 1)];
         playerAudioSource.Play();
-    }
-
-    public void Bounce()
-    {
-        if (_ballController.ballInHand)
-        {
-            playerAudioSource.clip = ballBounce;
-            playerAudioSource.Play();
-        }
     }
 
     public void Jump()
