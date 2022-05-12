@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshPro textOnWall;
     [SerializeField] private TextMeshProUGUI textEndGame;
+    [SerializeField] private TextMeshProUGUI endText;
     [SerializeField] private Transform player;
     private int _score;
 
@@ -23,6 +24,22 @@ public class Score : MonoBehaviour
             _score += (int)(transform.position - player.position).magnitude;
             textEndGame.text = "Score: " + _score;
             textOnWall.text = "Score: " + _score;
+            if (_score > 100)
+            {
+                endText.text = "Jordan, is that you?";
+                return;
+            }
+
+            if (_score > 60)
+            {
+                endText.text = "Admit it, have you trained anywhere?";
+                return;
+            }
+
+            if (_score > 30)
+            {
+                endText.text = "Not bad for a beginner";
+            }
         }
     }
 }
