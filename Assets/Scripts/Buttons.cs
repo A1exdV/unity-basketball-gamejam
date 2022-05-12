@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-   [SerializeField] private AudioListener sound;
+   [SerializeField] private List<AudioSource> sounds;
    [SerializeField] private TextMeshProUGUI soundText;
 
    public void RestartButton()
@@ -17,15 +17,21 @@ public class Buttons : MonoBehaviour
 
    public void SoundState()
    {
-      if (sound.enabled)
+      if (sounds[0].mute)
       {
-         sound.enabled = false;
-         soundText.text = "Sound: OFF";
+         foreach (var sound in sounds)
+         {
+            sound.mute = false;
+            soundText.text = "Sound: OFF";
+         }
       }
       else
       {
-         sound.enabled = true;
-         soundText.text = "Sound: ON";
+         foreach (var sound in sounds)
+         {
+            sound.mute = true;
+            soundText.text = "Sound: ON";
+         }
       }
    }
 }
