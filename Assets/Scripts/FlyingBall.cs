@@ -20,9 +20,21 @@ public class FlyingBall : MonoBehaviour
         _timer = 0;
         _force = forceImg.fillAmount;
 
-        if (_force is <= 0.65f or >= 0.765f)
+        if (_force < 0.48f)
         {
-            _endPos += new Vector3(Random.Range(-5, 5), 0, 0);
+            _endPos += new Vector3(Random.Range(5, 3), 0, 0);
+        }
+        if (_force is < 0.65f and >= 0.48f)
+        {
+            _endPos += new Vector3(Random.Range(3, 0), 0, 0);
+        }
+        if (_force is < 0.9f and > 0.765f)
+        {
+            _endPos += new Vector3(Random.Range(0, -3), 0, 0);
+        }
+        if (_force >= 0.9f)
+        {
+            _endPos += new Vector3(Random.Range(-3, -5), 0, 0);
         }
     }
 
