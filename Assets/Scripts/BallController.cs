@@ -53,6 +53,7 @@ public class BallController : MonoBehaviour
             _thisRB.isKinematic = true;
             var direction = new Vector3(basketTrigger.transform.position.x,transform.position.y,basketTrigger.transform.position.z);
             transform.LookAt(direction);
+            _ballInHand = false;
         }
     }
 
