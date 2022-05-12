@@ -12,7 +12,6 @@ public class BallBounce : MonoBehaviour
 
         if (!IsGrounded()) return;
         sound.Play();
-        print("+");
     }
 
     private bool IsGrounded() => Physics.CheckSphere(groundCheck.transform.position, 0.22f, _groundLayer);
